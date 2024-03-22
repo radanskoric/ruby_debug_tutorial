@@ -1,11 +1,11 @@
 require "digest"
 
-SECRET_WORD_SHA256 = "e4ba5cbd251c98e6cd1c23f126a3b81d8d8328abc95387229850952b3ef9f904".freeze
+SECRET_WORD_SHA256 = "f259d1f5729a364a5b98dae54ef3d801386622c4a1abb8048320957597272fa8".freeze
 
 def sesame(secret_word)
   if Digest::SHA256.hexdigest(secret_word) == SECRET_WORD_SHA256
     puts "WELL DONE! You got the right answer! \n You've successfully solved the challenge! \n\n" \
-      "Thank you for participating, this is it for now. \n" \
+      "Thank you for participating, this is it for this time. \n" \
       "Type continue to let the program run to completion."
     true
   else
@@ -14,13 +14,26 @@ def sesame(secret_word)
   end
 end
 
+
+actual_hint = <<~HINT
+  Well done!! You found the actual hint. :)
+  Here it is: In the current scope there is also a constant called SECRET.
+  Try inspecting its value to find the secret word and then call `sesame` again.
+HINT
+
+
+
+# You almost reached the hint, keep going. :)
+
+
+
 def evaluate_exercise
   # Welcome to the other part of the tutorial!
   # The execution stopped because we added an explicit break call
-  binding.break # Use next to move on.
+  debugger # Use next to move on.
 
   breaking_in_your_own_code = <<~EXPLANATION
-    Using a manual binding.break is the easiest way to trigger a debugger
+    Using a manual `debugger` call is the easiest way to trigger a debugger
     outside an IDE. Try using it in your own code.
     Use next to move on.
   EXPLANATION
@@ -45,7 +58,9 @@ def evaluate_exercise
 
 
   hint = <<~EXPLANATION
-    In the current scope there is also a constant called SECRET.
-    Try inspecting its value to find the secret word and then call sesame again.
+    Ha, the hint is not actually here! The hint is up, in the top part of the file.
+    No, no, don't open it in your editor, you won't learn that way. `list` or `l`
+    shows the source code around the current line and `list -` or `l -`
+    successively shows previous blocks of code. Use it until you get to the hint.
   EXPLANATION
 end

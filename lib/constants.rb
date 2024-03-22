@@ -1,1 +1,1 @@
-SECRET = "The secret key is: 'bananas'."
+SECRET = "The secret word is: 'minaswan'. Do you know what it stands for?"
