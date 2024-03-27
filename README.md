@@ -8,7 +8,7 @@ All you need is a working installation of [Ruby 3.3+](https://www.ruby-lang.org/
 
 To start the tutorial, first clone this repo:
 ```bash
-git clone git@github.com:radanskoric/ruby_debug_tutorial.git
+git clone https://github.com/radanskoric/ruby_debug_tutorial.git
 ```
 
 And then run the following command in your terminal:
