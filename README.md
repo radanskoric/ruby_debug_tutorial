@@ -13,7 +13,7 @@ git clone https://github.com/radanskoric/ruby_debug_tutorial.git
 
 And then run the following command in your terminal:
 ```bash
-rdbg intro.rb
+ruby start.rb
 ```
 Don't read the source code because it will spoil the fun. :)
 

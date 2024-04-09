@@ -4,4 +4,4 @@ FROM ruby:3.3
 WORKDIR /app
 
 # Run the tutorial when the container starts
-CMD ["rdbg", "intro.rb"]
+CMD ["ruby", "start.rb"]
